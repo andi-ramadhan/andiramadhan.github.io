@@ -5,7 +5,9 @@ function App() {
 
   return (
     <>
-      <Dashboard />
+      <main className=''>
+        <Dashboard /> 
+      </main>
     </>
   )
 }
