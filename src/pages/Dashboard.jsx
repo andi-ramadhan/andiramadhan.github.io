@@ -1,6 +1,6 @@
 const Dashboard = () => {
   return (
-    <section className="w-full h-full">
+    <section className="w-full h-full bg-white">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-9xl">Dashboard</h1>
       </div>
