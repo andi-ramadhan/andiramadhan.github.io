@@ -9,5 +9,11 @@ const About = () => {
     </section>
   )
 }
+About.motion = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { x: -1000 },
+  transition: { duration: 0.5, ease: "easeInOut" }
+}
 
 export default About;
