@@ -82,7 +82,7 @@ const Header = ({ activeSection, onSectionChange }) => {
               key={item.key}
               to={item.to}
               className={`
-                mobile-nav-link w-full border-black/20 rounded-md border p-2 
+                mobile-nav-link w-full border-black/20 bg-gray-200/50 backdrop-blur-sm rounded-md border p-2 
                 transition-all duration-500
                 ${activeSection === item.key ? "font-semibold" : ""}
                 ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
