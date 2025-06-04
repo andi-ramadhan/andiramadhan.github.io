@@ -1,4 +1,5 @@
 import { motion, easeInOut } from "framer-motion";
+import { NavLink } from "react-router";
 
 const Dashboard = () => {
   return (
@@ -29,17 +30,41 @@ const Dashboard = () => {
           className="flex flex-col gap-4 pt-2"
         >
           <h3 className="text-center text-xl md:text-2xl">Hi! I'm <span className="text-2xl font-semibold">Andi</span>, a:</h3>
-          <p className="flex flex-wrap gap-2 justify-center font-semibold text-base md:text-lg">
-            <span className="bg-my-dark text-my-yellow px-6 py-2 rounded-full">Junior Full-Stack Web Developer</span>
-            <span className="bg-my-cyan text-my-dark px-6 py-2 rounded-full">IT Support Specialist</span>
-            <span className="bg-my-yellow text-my-dark px-6 py-2 rounded-full">Illustrator</span>
+          <p className="flex flex-wrap gap-2 justify-center font-semibold text-sm md:text-lg">
+            <motion.span
+              initial= {{ opacity: 0, y: 20 }}
+              animate= {{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.9}} 
+              className="bg-my-dark text-my-yellow px-6 py-2 rounded-full"
+            >
+              Junior Full-Stack Web Developer
+            </motion.span>
+            <motion.span
+              initial= {{ opacity: 0, y: 20 }}
+              animate= {{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 1}} 
+              className="bg-my-cyan text-my-dark px-6 py-2 rounded-full"
+            >
+              IT Support Specialist
+            </motion.span>
+            <motion.span
+              initial= {{ opacity: 0, y: 20 }}
+              animate= {{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 1.1}}
+              className="bg-my-yellow text-my-dark px-6 py-2 rounded-full"
+            >
+              Illustrator
+            </motion.span>
           </p>
         </motion.div>
-        <button className="mt-10 flex flex-col justify-center items-center animate-bounce border border-my-dark/50 rounded-full px-2 py-1">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-my-cyan">
+        <NavLink
+          to={'/about'}
+          className="fixed bottom-1/6 md:bottom-1/5 flex flex-col justify-center items-center animate-bounce border border-my-dark/50 bg-my-dark rounded-full px-3 py-1 md:px-4 md:py-2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={5} stroke="currentColor" className="size-5 md:size-6 text-my-yellow">
             <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
           </svg>
-        </button>
+        </NavLink>
       </div>
     </section>
   )
