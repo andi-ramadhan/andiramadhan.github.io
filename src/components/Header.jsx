@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router";
 
 const Header = ({ activeSection, onSectionChange }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
   const navLinks = [
-    { key: "home", label: "Home" },
-    { key: "about", label: "About" },
-    { key: "project", label: "Project" },
-    { key: "contact", label: "Contact" },
+    { key: "home", to:'/', label: "Home" },
+    { key: "about", to:'/about', label: "About" },
+    { key: "project", to:'/project', label: "Project" },
+    { key: "contact", to:'/contact', label: "Contact" },
   ];
 
   const handleMenuToggle = () => {
@@ -33,13 +34,14 @@ const Header = ({ activeSection, onSectionChange }) => {
       {/* Desktop Nav */}
       <nav className={`absolute hidden md:flex md:justify-around md:items-center md:w-[40%] md:top-10 md:bg-gray-50 md:py-2 md:rounded-lg md:shadow-lg md:text-sm lg:text-base`}>
         {navLinks.map((item) => (
-          <button
+          <NavLink
             key={item.key}
+            to={item.to}
             className={`px-2 py-1 ${activeSection === item.key ? "font-semibold" : ""}`}
             onClick={() => onSectionChange(item.key)}
           >
             {item.label}
-          </button>
+          </NavLink>
         ))}
       </nav>
 
@@ -76,8 +78,9 @@ const Header = ({ activeSection, onSectionChange }) => {
           style={{ transitionProperty: "max-width, opacity, padding" }}
         >
           {navLinks.map((item, idx) => (
-            <button
+            <NavLink
               key={item.key}
+              to={item.to}
               className={`
                 mobile-nav-link w-full border-black/20 rounded-md border p-2 
                 transition-all duration-500
@@ -94,7 +97,7 @@ const Header = ({ activeSection, onSectionChange }) => {
               }}
             >
               {item.label}
-            </button>
+            </NavLink>
           ))}
         </nav>
       )}
