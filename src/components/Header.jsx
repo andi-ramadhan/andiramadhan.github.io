@@ -37,7 +37,7 @@ const Header = ({ activeSection, onSectionChange }) => {
           <NavLink
             key={item.key}
             to={item.to}
-            className={`px-2 py-1 ${activeSection === item.key ? "font-semibold" : ""}`}
+            className={({ isActive }) => isActive ? "font-semibold" : ""}
             onClick={() => onSectionChange(item.key)}
           >
             {item.label}
@@ -81,10 +81,10 @@ const Header = ({ activeSection, onSectionChange }) => {
             <NavLink
               key={item.key}
               to={item.to}
-              className={`
-                mobile-nav-link w-full border-black/20 bg-gray-200/50 backdrop-blur-sm rounded-md border p-2 
+              className={({ isActive }) =>
+                `mobile-nav-link w-full border-black/20 bg-my-cyan/5 backdrop-blur-sm rounded-md border p-2 
                 transition-all duration-500
-                ${activeSection === item.key ? "font-semibold" : ""}
+                ${isActive ? "font-semibold" : ""}
                 ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
               `}
               style={{
