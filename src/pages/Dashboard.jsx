@@ -44,11 +44,5 @@ const Dashboard = () => {
     </section>
   )
 }
-Dashboard.motion = {
-  initial: { opacity: 1 },
-  animate: { y : 0 },
-  exit: { y: -1000 },
-  transition: { duration: 0.5, ease: "easeInOut" }
-}
 
 export default Dashboard;
