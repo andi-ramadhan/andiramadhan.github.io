@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 const Dashboard = () => {
   return (
-    <section id="home" className="flex justify-center text-gray-800 items-center min-h-screen w-full bg-[ffff]">
+    <section id="home" className="flex justify-center text-gray-800 items-center -translate-y-5 min-h-screen w-full bg-[ffff]">
       <div className="flex flex-col justify-center items-center gap-5 w-[80%]">
         <div className="flex flex-col gap-2">
           <motion.h2
