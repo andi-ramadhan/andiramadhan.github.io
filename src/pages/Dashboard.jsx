@@ -6,30 +6,31 @@ const Dashboard = () => {
     <section id="home" className="flex justify-center text-gray-800 items-center -translate-y-5 min-h-screen w-full bg-[ffff]">
       <div className="flex flex-col justify-center items-center gap-5 w-[80%]">
         <div className="flex flex-col gap-2">
-          <motion.h2
-            initial= {{ opacity: 0, scale: 0.95 }}
-            animate= {{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            className="md:text-center text-3xl md:text-4xl"
-          >
-            Hi! <span className=" font-semibold">I'm Andi</span>, a:
-          </motion.h2>
           <motion.h1
             initial= {{ opacity: 0, scale: 0.95 }}
             animate= {{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.5 }}
-            className='text-3xl md:text-4xl lg:text-5xl md:text-center font-semibold capitalize'
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="md:text-center text-4xl md:text-5xl"
           >
-            I build with <span className="text-my-yellow">purpose</span>, scaled with <span className="text-[#15af8d]">care</span>
+            I'm Andi
           </motion.h1>
           <motion.h2
-            initial= {{ opacity: 0, y: 20 }}
-            animate= {{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.7}}
-            className='text-2xl md:text-3xl md:text-center text-balance relative'
+            initial= {{ opacity: 0, scale: 0.95 }}
+            animate= {{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+            className="md:text-center text-3xl md:text-4xl"
           >
-            Crafting ideas into digital reality, deliver the message through code
+            Passionate FrontEnd & BackEnd Developer
           </motion.h2>
+          <motion.p
+            initial= {{ opacity: 0, scale: 0.95 }}
+            animate= {{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+            className="text-lg md:text-2xl"
+          >
+            I build with purpose, and scale it with care.
+            Deliver it both in visual and in code.
+          </motion.p>
         </div>
         <motion.div 
           initial= {{ opacity: 0, y: 20 }}
@@ -64,26 +65,6 @@ const Dashboard = () => {
             </motion.span>
           </p>
         </motion.div>
-        <div className="w-[80%] h-full absolute top-60 lg:top-50 flex justify-center items-center gap-5 md:gap-10 text-center text-sm md:text-base">
-          <NavLink
-            to={'/project'}
-            className="
-            border border-dashed border-my-dark text-my-dark font-semibold rounded-full w-60 py-2
-            hover:bg-my-cyan transition-colors duration-200
-            "
-          >
-            My Project
-          </NavLink>
-          <NavLink
-            to={'/about'}
-            className="
-            border border-dashed border-my-dark text-my-dark font-semibold rounded-full w-60 py-2
-            hover:bg-my-yellow transition-colors duration-200
-            "
-          >
-            About Me
-          </NavLink>
-        </div>
       </div>
     </section>
   )
