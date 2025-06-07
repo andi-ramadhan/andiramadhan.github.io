@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
+import homeIcon from "./icons/homeIcon";
+import aboutIcon from "./icons/aboutIcon";
+import projectIcon from "./icons/projectIcon";
 
 const Header = ({ activeSection, onSectionChange }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
   const navLinks = [
-    { key: "home", to:'/', label: "Home" },
-    { key: "about", to:'/about', label: "About" },
-    { key: "project", to:'/project', label: "Project" },
-    { key: "contact", to:'/contact', label: "Contact" },
+    { key: "home", to:'/', label: homeIcon() },
+    { key: "about", to:'/about', label: aboutIcon() },
+    { key: "project", to:'/project', label: projectIcon() },
   ];
 
   const handleMenuToggle = () => {
@@ -52,17 +54,17 @@ const Header = ({ activeSection, onSectionChange }) => {
         aria-label="Toggle navigations"
       >
         <div className="relative flex items-center justify-center origin-center top-5">
-          <div className="relative size-10 border rounded-md border-black/20 backdrop-blur-sm">
+          <div className="relative size-10 border rounded-md border-my-maroon backdrop-blur-sm">
             <div
               className={`
-                absolute left-1/4 top-1/2 w-5 h-0.5 rounded bg-black/60 transition-all duration-300
-                ${menuOpen ? "-translate-y-1/2 rotate-45" : "-translate-y-1" }
+                absolute left-1/4 top-1/2 w-5 h-0.5 rounded transition-all duration-300
+                ${menuOpen ? "-translate-y-1/2 rotate-45 bg-my-cyan" : "bg-my-maroon -translate-y-1" }
               `}
             />
             <div
               className={`
-                absolute left-1/4 top-1/2 w-5 h-0.5 bg-black/60 rounded transition-all duration-300
-                ${menuOpen ? "-translate-y-1/2 -rotate-45" : "translate-y-1" }
+                absolute left-1/4 top-1/2 w-5 h-0.5 rounded transition-all duration-300
+                ${menuOpen ? "-translate-y-1/2 -rotate-45 bg-my-maroon" : "bg-my-maroon translate-y-1" }
               `}
             />
           </div>  
@@ -71,9 +73,9 @@ const Header = ({ activeSection, onSectionChange }) => {
       {showNav && (
         <nav
           className={`
-            fixed top-22 right-5 w-30 flex flex-col gap-2 justify-center items-center z-[10000] overflow-hidden text-center
+            fixed top-5 right-16 w-[50%] h-10 rounded-md backdrop-blur-sm border gap-5 flex flex-row-reverse justify-evenly items-center z-[10000] overflow-hidden text-center
             transition-all duration-500
-            ${menuOpen ? "max-w-96 opacity-100" : "max-w-0 opacity-0 py-0 pointer-events-none"}
+            ${menuOpen ? "opacity-100" : "max-w-0 opacity-0 py-0 pointer-events-none"}
           `}
           style={{ transitionProperty: "max-width, opacity, padding" }}
         >
@@ -82,15 +84,11 @@ const Header = ({ activeSection, onSectionChange }) => {
               key={item.key}
               to={item.to}
               className={({ isActive }) =>
-                `mobile-nav-link w-full border-black/20 backdrop-blur-sm rounded-md border p-2 
+                `mobile-nav-link text-my-cyan
                 transition-all duration-500
-                ${isActive ? "font-semibold" : ""}
                 ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
               `}
-              style={{
-                transitionDelay: menuOpen
-                  ? `${idx * 100}ms` : `100ms`
-              }}
+              
               onClick={() => {
                 onSectionChange(item.key);
                 handleMenuToggle();
