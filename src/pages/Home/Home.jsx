@@ -3,7 +3,7 @@ import Dashboard from "./components/Dashboard";
 
 const Home = () => {
   return (
-    <section className="w-full min-h-dvh bg-my-cyan/3">
+    <section className="w-full min-h-dvh bg-my-white">
       <Dashboard />
       <AboutBrief />
     </section>
