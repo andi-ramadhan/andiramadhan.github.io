@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-my-white: rgb(234, 235, 208);
-  --color-my-maroon-150: rgb(175, 62, 62);
-  --color-my-maroon-100: rgb(205, 86, 86);
-  --color-my-maroon-50: rgb(218, 108, 108);
+  --color-my-white: rgb(254, 249, 225);
+  --color-my-whitesmoke: rgb(229, 208, 172);
+  --color-my-maroon-blood: rgb(163, 29, 29);
+  --color-my-maroon: rgb(109, 35, 35);
 }
 
 .color-switcher {
-  color:  rgb(218, 108, 108);
+  color:  rgb(109, 35, 35);
 }
