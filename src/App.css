@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Solway:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-my-white: rgb(254, 249, 225);
   --color-my-whitesmoke: rgb(229, 208, 172);
   --color-my-maroon-blood: rgb(163, 29, 29);
+  --color-my-maroon-dark: rgb(71, 20, 20);
   --color-my-maroon: rgb(109, 35, 35);
   --color-my-cyan: rgb(9, 177, 133);
   --font-inter: "Inter", sans-serif;
-  --font-solway: "Solway", serif;
+  --font-aleo: "Aleo", serif;
 }
 
 @layer base {
   h1, h2, h3, h4 {
-    font-family: var(--font-inter);
+    font-family: var(--font-aleo);
   }
   p {
     font-family: var(--font-inter);
@@ -21,5 +22,5 @@
 }
 
 .color-switcher {
-  color:  rgb(9, 177, 133);
+  color: rgb(71, 20, 20);
 }
