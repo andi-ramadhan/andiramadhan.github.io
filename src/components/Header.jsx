@@ -25,7 +25,7 @@ const Header = ({ activeSection, onSectionChange }) => {
           <NavLink
             key={item.key}
             to={item.to}
-            className={({ isActive }) => isActive ? "text-my-cyan" : " text-my-maroon/50"}
+            className={({ isActive }) => isActive ? "text-my-cyan" : " text-my-maroon/70"}
             onClick={() => onSectionChange(item.key)}
           >
             {item.label}
