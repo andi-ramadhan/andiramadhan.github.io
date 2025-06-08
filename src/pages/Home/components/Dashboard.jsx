@@ -9,10 +9,10 @@ const Dashboard = () => {
   }
   
   return (
-    <section id="home" className="flex flex-col justify-center text-gray-800 items-center -translate-y-5 min-h-screen w-full">
+    <section id="home" className="flex flex-col justify-center text-my-black items-center -translate-y-5 min-h-screen w-full">
 
       <div className="flex flex-col justify-center items-center gap-5 w-[80%]">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-my-black">
           <motion.h1
             initial= {{ opacity: 0, scale: 0.95 }}
             animate= {{ opacity: 1, scale: 1 }}
@@ -25,7 +25,7 @@ const Dashboard = () => {
             initial= {{ opacity: 0, scale: 0.95 }}
             animate= {{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 0.5 }}
-            className="md:text-center text-3xl md:text-4xl text-my-maroon font-semibold"
+            className="md:text-center text-3xl md:text-4xl font-semibold text-my-red"
           >
             A Self Taught Passionate Developer
           </motion.h2>
@@ -33,7 +33,7 @@ const Dashboard = () => {
             initial= {{ opacity: 0, scale: 0.95 }}
             animate= {{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 0.6 }}
-            className="text-lg md:text-2xl md:text-center text-my-maroon"
+            className="text-lg md:text-2xl md:text-center"
           >
             I build with purpose, and scale it with care.
             Deliver both in visual and under the hood.
@@ -50,7 +50,7 @@ const Dashboard = () => {
               initial= {{ opacity: 0, y: 20 }}
               animate= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.9}} 
-              className="border-my-cyan border-2 text-my-maroon px-6 py-2 rounded-xl"
+              className="border-my-cyan border-2 px-6 py-2 rounded-xl"
             >
               Junior Full-Stack Web Developer
             </motion.span>
@@ -58,7 +58,7 @@ const Dashboard = () => {
               initial= {{ opacity: 0, y: 20 }}
               animate= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 1}} 
-              className="border-my-cyan border-2 text-my-maroon px-6 py-2 rounded-xl"
+              className="border-my-cyan border-2 px-6 py-2 rounded-xl"
             >
               IT Support Specialist
             </motion.span>
@@ -66,7 +66,7 @@ const Dashboard = () => {
               initial= {{ opacity: 0, y: 20 }}
               animate= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 1.1}}
-              className="border-my-cyan border-2 text-my-maroon px-6 py-2 rounded-xl"
+              className="border-my-cyan border-2 px-6 py-2 rounded-xl"
             >
               Illustrator
             </motion.span>
@@ -80,7 +80,7 @@ const Dashboard = () => {
         className="absolute bottom-[10%] md:bottom-[20%] animate-bounce flex items-center justify-center"
         onClick={() => handleScroll('about')}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-6 md:size-8 text-my-maroon-blood">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-6 md:size-8 text-my-red">
           <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
         </svg>
       </motion.button>

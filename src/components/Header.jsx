@@ -16,7 +16,7 @@ const Header = ({ activeSection, onSectionChange }) => {
       {/* Desktop Nav */}
       <nav 
         className={`
-          fixed top-5 flex justify-around items-center mx-auto w-[50%] md:w-[40%] border-my-maroon-dark/10 border-2 md:top-10 py-2 
+          fixed top-5 flex justify-around items-center mx-auto w-[50%] md:w-[40%] border-my-black/20 border-2 md:top-10 py-2 
           rounded-lg shadow-lg backdrop-blur-lg 
         `}
       >
@@ -25,7 +25,7 @@ const Header = ({ activeSection, onSectionChange }) => {
           <NavLink
             key={item.key}
             to={item.to}
-            className={({ isActive }) => isActive ? "text-my-cyan" : " text-my-maroon/70"}
+            className={({ isActive }) => isActive ? "text-my-cyan" : " text-my-red"}
             onClick={() => onSectionChange(item.key)}
           >
             {item.label}

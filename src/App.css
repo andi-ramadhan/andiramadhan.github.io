@@ -4,10 +4,9 @@
 @theme {
   --color-my-white: rgb(254, 249, 225);
   --color-my-whitesmoke: rgb(229, 208, 172);
-  --color-my-maroon-blood: rgb(163, 29, 29);
-  --color-my-maroon-dark: rgb(71, 20, 20);
-  --color-my-maroon: rgb(109, 35, 35);
-  --color-my-cyan: rgb(9, 177, 133);
+  --color-my-cyan: #3CA081;
+  --color-my-red: #B1302B;
+  --color-my-black: #383228;
   --font-inter: "Inter", sans-serif;
   --font-aleo: "Aleo", serif;
 }
@@ -22,5 +21,5 @@
 }
 
 .color-switcher {
-  color: rgb(71, 20, 20);
+  color: #e5d0ac;
 }
