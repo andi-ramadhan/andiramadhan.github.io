@@ -25,7 +25,20 @@ const AboutBrief = () => {
           >
             Have a <span className="font-semibold text-my-red">good taste</span> at tweaking a design on <span className="font-semibold text-my-red">FrontEnd</span> as well as
             working with logic on the <span className="font-semibold text-my-red"> Backend</span> side. Details and goals oriented,
-            <span className="font-semibold text-my-red"> user experience above all</span>. Want to know more about me? <Link to={'/about'} className="text-my-cyan underline underline-offset-4">Come here</Link>
+            <span className="font-semibold text-my-red"> user experience above all</span>.
+          </motion.p>
+
+          <motion.p
+            initial= {{ opacity: 0, y: 20 }}
+            whileInView= {{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.5}}
+            viewport={{ once: true }}
+            className="text-balance md:text-lg"
+          >
+            Besides coding, I enjoy creating 2D illustrations both digitally and in traditional art.
+            As an experienced <span className="font-semibold text-my-cyan">IT Support Specialist</span>, 
+            I'm always very passionate about Technology and will always do.
+            Want to know more about me? <Link to={'/about'} className="text-my-cyan underline underline-offset-4">Come here</Link>
           </motion.p>
         </div>
         <div className="flex flex-col gap-4">
@@ -41,7 +54,7 @@ const AboutBrief = () => {
           
           <div className="flex flex-wrap">
             <motion.div
-              className="w-full md:w-1/2 mb-4"
+              className="w-full md:w-1/2 md:px-2 mb-5"
               initial= {{ opacity: 0, y: 20 }}
               whileInView= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.9}}
@@ -60,7 +73,7 @@ const AboutBrief = () => {
             </motion.div>
             
             <motion.div
-              className="w-full md:w-1/2 px-2 mb-4"
+              className="w-full md:w-1/2 md:px-2 mb-5"
               initial= {{ opacity: 0, y: 20 }}
               whileInView= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 1}}
@@ -69,7 +82,7 @@ const AboutBrief = () => {
               <ProjectCardSmall
                 imgSrc="/assets/webcafe.webp"
                 title="Web Cafe Menu (OnProgress)"
-                desc="A Full Stack Web Project, planned to be a Cafe menu web based
+                desc="Full-Stack Web Project, Cafe menu web based
                     that serve a transparancy between customer and the menu order cycle."
                 tags={[
                   { child: 'React' }, { child: 'Vite' }, { child: 'TailwindCSS' }, { child: 'ExpressJs' },
