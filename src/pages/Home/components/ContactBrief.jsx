@@ -1,18 +1,49 @@
+import { motion } from "framer-motion";
+
 const ContactBrief = () => {
+  const socialMediaIcon = [
+    { icon:"fa-brands fa-linkedin" },
+    { icon:"fa-brands fa-whatsapp" },
+    { icon:"fa-regular fa-envelope" },
+    { icon:"fa-brands fa-instagram" },
+  ]
+
   return (
     <section id="about" className="w-full min-h-dvh flex justify-center text-my-black">
-      <article className="w-[80%] flex flex-col gap-2 py-20 border-t border-dashed border-my-cyan">
-        <h1 className="text-3xl md:text-4xl font-semibold text-my-cyan">Get in Touch</h1>
-        <p>
+      <article className="w-[80%] flex flex-col gap-2 py-20 border-t-2 border-dashed border-my-cyan">
+        <motion.h1
+          initial= {{ opacity: 0, y: 20 }}
+          whileInView= {{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.4}}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-semibold text-my-cyan"
+        >
+          Get in Touch
+        </motion.h1>
+        <motion.p
+          initial= {{ opacity: 0, y: 20 }}
+          whileInView= {{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.5}}
+          viewport={{ once: true }}
+        >
           Interesting in my works? Want to collaborate or even
           hire me to your project? You can message me on one of the links
           below. Let's catch up!
-        </p>
+        </motion.p>
         <div className="flex gap-4 text-4xl text-my-cyan mt-3">
-          <i className="fa-brands fa-linkedin"></i>
-          <i className="fa-brands fa-whatsapp"></i>
-          <i className="fa-regular fa-envelope"></i>
-          <i className="fa-brands fa-instagram"></i>
+          {socialMediaIcon.map((icon, idx) => (
+            <motion.i
+              key={idx}
+              className={icon.icon}
+              initial= {{ opacity: 0, y: 20 }}
+              whileInView= {{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.3,
+                delay: 0.7 + idx * 0.1,
+              }}
+              viewport={{ once: true }}
+            ></motion.i>
+          ))}
         </div>
       </article>
       <div className="absolute bottom-15 text-center text-sm opacity-50">
