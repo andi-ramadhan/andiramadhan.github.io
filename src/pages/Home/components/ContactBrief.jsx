@@ -9,10 +9,10 @@ const ContactBrief = () => {
           below. Let's catch up!
         </p>
         <div className="flex gap-4 text-4xl text-my-cyan mt-3">
-          <i class="fa-brands fa-linkedin"></i>
+          <i className="fa-brands fa-linkedin"></i>
           <i className="fa-brands fa-whatsapp"></i>
-          <i class="fa-regular fa-envelope"></i>
-          <i class="fa-brands fa-instagram"></i>
+          <i className="fa-regular fa-envelope"></i>
+          <i className="fa-brands fa-instagram"></i>
         </div>
       </article>
       <div className="absolute bottom-15 text-center text-sm">
