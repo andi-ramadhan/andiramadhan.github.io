@@ -24,7 +24,7 @@ const AboutBrief = () => {
             className="text-balance md:text-lg"
           >
             Have a <span className="font-semibold text-my-red">good taste</span> at tweaking a design on <span className="font-semibold text-my-red">FrontEnd</span> as well as
-            working the logic on the <span className="font-semibold text-my-red"> Backend</span> side. Detail and goals oriented,
+            working with logic on the <span className="font-semibold text-my-red"> Backend</span> side. Detail and goals oriented,
             <span className="font-semibold text-my-red"> user experience above all</span>. Want to know more about me? <Link to={'/about'} className="text-my-cyan underline underline-offset-4">Come here</Link>
           </motion.p>
         </div>
