@@ -20,7 +20,7 @@ const Header = ({ activeSection, onSectionChange }) => {
         animate= {{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 0.15}}
         className={`
-          fixed top-5 flex justify-around items-center mx-auto w-[50%] md:w-[40%] border-my-black/20 border-2 md:top-10 py-2 
+          fixed top-5 flex justify-around items-center mx-auto w-[50%] md:max-w-[400px] border-my-black/20 border-2 md:top-10 py-2 
           rounded-lg shadow-lg backdrop-blur-lg 
         `}
       >
