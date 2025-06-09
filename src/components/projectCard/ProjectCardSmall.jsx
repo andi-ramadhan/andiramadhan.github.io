@@ -3,10 +3,10 @@ import TagCard from "../TagCard";
 
 const ProjectCardSmall = ({ imgSrc = '', title = '', desc = '', tags = [], btnLWidth = 'w-3/5', btnRWidth = 'w-2/5', viewLink = '#', liveLink = '#' }) => {
   return (
-    <div className="container flex flex-col gap-5 p-6 rounded-lg shadow-lg shadow-my-black/20">
+    <div className="w-full md:h-[600px] flex flex-col justify-between gap-5 p-6 rounded-lg shadow-lg shadow-my-black/20">
       
       {/* IMAGE */}
-      <figure className="w-full h-36 overflow-hidden rounded-md">
+      <figure className="w-full h-36 md:h-50 overflow-hidden rounded-md">
         <img 
           src={imgSrc}
           className="size-full object-contain"
@@ -15,11 +15,13 @@ const ProjectCardSmall = ({ imgSrc = '', title = '', desc = '', tags = [], btnLW
       </figure>
 
       {/* CONTENT */}
-      <div className="container flex flex-col gap-3">
+      <div className="flex flex-col justify-center gap-3">
         <h2 className="text-2xl md:text-3xl font-semibold text-balance text-my-red">{title}</h2>
-        <p className="text-sm text-my-black">
-          {desc}
-        </p>
+        <div className="flex justify-center">
+          <p className="md:text-lg text-my-black flex-1">
+            {desc}
+          </p>
+        </div>
         <div className="flex-wrap flex gap-2 items-center text-xs md:text-base text-my-black">
           <p className="text-my-black font-semibold">Tools:</p>
           {tags.map((tag, idx) => (
