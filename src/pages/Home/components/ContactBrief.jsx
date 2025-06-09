@@ -11,7 +11,7 @@ const ContactBrief = () => {
 
   return (
     <section id="about" className="w-full min-h-[80dvh] flex justify-center text-my-black">
-      <article className="w-[80%] md:w-[40%] flex flex-col gap-2 md:gap-8 pt-20 md:pt-40 pb-20 border-t-2 border-dashed border-my-cyan">
+      <article className="w-[80%] md:w-[40%] flex flex-col md:items-center gap-2 md:gap-8 pt-20 md:pt-40 pb-20 border-t-2 border-dashed border-my-cyan">
         <motion.h1
           initial= {{ opacity: 0, y: 20 }}
           whileInView= {{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ const ContactBrief = () => {
           whileInView= {{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.5}}
           viewport={{ once: true }}
-          className="md:max-w-[50%] text-pretty md:text-lg"
+          className="md:max-w-[70%] md:text-center text-pretty md:text-lg"
         >
           Interested in my works? Want to collaborate or hire me for your project or company?
           You can message me on the links below. Let's catch up!
