@@ -12,7 +12,7 @@ const Dashboard = () => {
     <section id="home" className="flex flex-col justify-center text-my-black items-center -translate-y-5 min-h-screen w-full">
 
       <div className="flex flex-col justify-center items-center gap-5 w-[80%]">
-        <div className="flex flex-col gap-2 text-my-black">
+        <div className="flex flex-col gap-2">
           <motion.h1
             initial= {{ opacity: 0, scale: 0.95 }}
             animate= {{ opacity: 1, scale: 1 }}
@@ -45,7 +45,7 @@ const Dashboard = () => {
           transition={{ duration: 0.3, delay: 0.8}}
           className="flex flex-col gap-4 pt-2"
         >
-          <p className="flex flex-wrap gap-2 font-semibold text-sm md:text-lg">
+          <p className="flex flex-wrap gap-2 sm:items-center sm:justify-center font-semibold text-sm md:text-lg">
             <motion.span
               initial= {{ opacity: 0, y: 20 }}
               animate= {{ opacity: 1, y: 0 }}
