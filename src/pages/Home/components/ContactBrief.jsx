@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import { NavLink } from "react-router";
 
 const ContactBrief = () => {
   const socialMediaIcon = [
-    { icon:"fa-brands fa-linkedin" },
-    { icon:"fa-brands fa-whatsapp" },
-    { icon:"fa-regular fa-envelope" },
-    { icon:"fa-brands fa-instagram" },
+    { icon:"fa-brands fa-linkedin", link:"https://www.linkedin.com/in/andi-fajar-ramadhan/" },
+    { icon:"fa-brands fa-whatsapp", link:"https://wa.me/6281291678841" },
+    { icon:"fa-regular fa-envelope", link:"mailto:ramadhanfajar.ara@gmail.com?subject=Interested%20in%20Your%20Works&body=Hi%20Andi!%0A%0AI'm%20interested%20to%20hire/collaborate%20with%20you%20."},
+    { icon:"fa-brands fa-instagram", link:"https://www.instagram.com/araru_ra/" },
   ]
 
   return (
@@ -26,12 +27,12 @@ const ContactBrief = () => {
           transition={{ duration: 0.3, delay: 0.5}}
           viewport={{ once: true }}
         >
-          Interesting in my works? Want to collaborate or even
-          hire me to your project? You can message me on one of the links
-          below. Let's catch up!
+          Interesting in my works? Want to collaborate or hire me for your project or company?
+          You can message me on the links below. Let's catch up!
         </motion.p>
         <div className="flex gap-4 text-4xl text-my-cyan mt-3">
           {socialMediaIcon.map((icon, idx) => (
+          <NavLink key={idx} to={icon.link} target="_blank">
             <motion.i
               key={idx}
               className={icon.icon}
@@ -43,6 +44,7 @@ const ContactBrief = () => {
               }}
               viewport={{ once: true }}
             ></motion.i>
+          </NavLink>
           ))}
         </div>
       </article>
