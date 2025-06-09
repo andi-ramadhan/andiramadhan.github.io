@@ -5,6 +5,7 @@ const Home = lazy(() => import("../pages/Home/Home"));
 const About = lazy(() => import("../pages/About"));
 const Project = lazy(() => import("../pages/Project"));
 const Contact = lazy(() => import("../pages/Contact"));
+const Maintenance = lazy(() => import("../pages/Maintenance"));
 
 
 const PageRoute = () => {
@@ -12,9 +13,8 @@ const PageRoute = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />}/>
-        <Route path='/project' element={<Project />}/>
-        <Route path='/contact' element={<Contact />}/> 
+        <Route path='/about' element={<Maintenance />}/>
+        <Route path='/project' element={<Maintenance />}/> 
       </Routes>
     </Suspense>
   )
