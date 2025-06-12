@@ -50,7 +50,7 @@ const ContactBrief = () => {
         </div>
       </article>
       <div className="absolute bottom-15 text-center text-sm opacity-50">
-        <p>Copyright &copy; 2025 Andi Fajar Ramadhan</p>
+        <p>&copy; 2025 Andi Fajar Ramadhan</p>
         <p>All rights reserved</p>
       </div>      
     </section>

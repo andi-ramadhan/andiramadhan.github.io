@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import AboutBrief from "./components/AboutBrief";
 import ContactBrief from "./components/ContactBrief";
 import Dashboard from "./components/Dashboard";

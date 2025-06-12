@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import ProjectCardSmall from "../../components/projectCard/ProjectCardSmall";
 import MaintenanceModal from "./ProjectView/MaintenanceModal";
+import { motion } from "framer-motion";
+import Footer from "../../components/Footer";
 
 const Project = () => {
   const [showModal, setShowModal] = useState(false);
@@ -15,11 +17,25 @@ const Project = () => {
 
   return (
     <section id="project" className="flex flex-col md:items-center w-[85%] md:w-[80%] py-25 md:py-40 gap-10 text-my-black">
-      <h1 className="text-3xl md:text-4xl text-my-cyan font-semibold">My Works</h1>
+      <motion.h1 
+        initial= {{ opacity: 0, y: 20 }}
+        whileInView= {{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.4 }}
+        viewport={{ once: true }}
+        className="text-3xl md:text-4xl text-my-cyan font-semibold"
+      >
+        My Works
+      </motion.h1>
       <div 
         onClick={handleContainerClick}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
       >
+        <motion.div
+          initial= {{ opacity: 0, y: 20 }}
+          whileInView= {{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
           <ProjectCardSmall
             id="siichiseivocalcourse"
             imgSrc="/assets/siichisei.webp"
@@ -32,7 +48,14 @@ const Project = () => {
             viewLink="#maintenance"
             liveLink='https://siichisei-vocalcourse.pages.dev/'
           />
+        </motion.div>
 
+        <motion.div
+          initial= {{ opacity: 0, y: 20 }}
+          whileInView= {{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
           <ProjectCardSmall
             imgSrc="/assets/webcafe.webp"
             title="Web Cafe Menu (OnProgress)"
@@ -47,7 +70,14 @@ const Project = () => {
             viewLink="#maintenance"
             repoLink="https://github.com/andi-ramadhan/web-cafe-menu"
           />
+        </motion.div>
 
+        <motion.div
+          initial= {{ opacity: 0, y: 20 }}
+          whileInView= {{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.7 }}
+          viewport={{ once: true }}
+        >
           <ProjectCardSmall
             imgSrc="https://opengraph.githubassets.com/1/andi-ramadhan/openmusic-api"
             title="OpenMusic API"
@@ -62,6 +92,7 @@ const Project = () => {
             viewLink="#maintenance"
             repoLink="https://github.com/andi-ramadhan/openmusic-api"
           />
+        </motion.div>
       </div>
       {showModal && (
         <div className="fixed inset-0 z-50 flex justify-center items-center bg-my-black/50">
@@ -74,6 +105,7 @@ const Project = () => {
           </button>
         </div>
       )}
+      <Footer />
     </section>
   )
 }
