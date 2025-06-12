@@ -14,7 +14,7 @@ const PageRoute = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />}/>
-        <Route path='/project' element={<Maintenance />}/> 
+        <Route path='/project' element={<Project />}/> 
       </Routes>
     </Suspense>
   )
