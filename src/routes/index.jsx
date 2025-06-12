@@ -3,7 +3,7 @@ import { lazy, Suspense } from "react";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const About = lazy(() => import("../pages/About/About"));
-const Project = lazy(() => import("../pages/Project"));
+const Project = lazy(() => import("../pages/Project/Project"));
 const Contact = lazy(() => import("../pages/Contact"));
 const Maintenance = lazy(() => import("../pages/Maintenance"));
 
