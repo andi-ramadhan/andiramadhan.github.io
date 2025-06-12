@@ -9,9 +9,11 @@ const Tools = () => {
       <div className="text-center text-my-cyan flex flex-wrap justify-center items-center gap-5 text-sm text-nowrap">
         
         {tooltipData.map((data, idx) => (
-          <Tooltip 
+          <Tooltip
+            key={idx}
             label={data.label}
             imgSrc={data.imgSrc}
+            imgSize="size-15 md:size-20"
           />
         ))}
         
