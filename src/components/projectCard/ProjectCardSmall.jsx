@@ -9,6 +9,7 @@ const ProjectCardSmall = ({ imgSrc = '', title = '', desc = '', tags = [], btnLW
       <figure className="w-full h-36 md:h-50 overflow-hidden rounded-md">
         <img 
           src={imgSrc}
+          loading="lazy"
           className="size-full object-contain"
           alt={title}
         />
