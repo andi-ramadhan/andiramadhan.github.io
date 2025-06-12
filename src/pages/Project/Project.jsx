@@ -1,10 +1,25 @@
+import { useEffect, useRef, useState } from "react";
 import ProjectCardSmall from "../../components/projectCard/ProjectCardSmall";
+import MaintenanceModal from "./ProjectView/MaintenanceModal";
 
 const Project = () => {
+  const [showModal, setShowModal] = useState(false);
+ 
+  const handleContainerClick = (e) => {
+    const link = e.target.closest('a[href="#maintenance"]');
+    if (link) {
+      e.preventDefault();
+      setShowModal(true);
+    }
+  };
+
   return (
     <section id="project" className="flex flex-col md:items-center w-[85%] md:w-[80%] py-25 md:py-40 gap-10 text-my-black">
       <h1 className="text-3xl md:text-4xl text-my-cyan font-semibold">My Works</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div 
+        onClick={handleContainerClick}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
           <ProjectCardSmall
             id="siichiseivocalcourse"
             imgSrc="/assets/siichisei.webp"
@@ -14,7 +29,7 @@ const Project = () => {
             tags={[
               { child: 'React Router' }, { child: 'Vite' }, { child: 'TailwindCSS' }, { child: 'EmailJS' }
             ]}
-            viewLink="/project#siichiseivocalcourse"
+            viewLink="#maintenance"
             liveLink='https://siichisei-vocalcourse.pages.dev/'
           />
 
@@ -29,7 +44,7 @@ const Project = () => {
             ]}
             btnLWidth="w-full"
             btnRWidth="hidden"
-            viewLink="/project"
+            viewLink="#maintenance"
             repoLink="https://github.com/andi-ramadhan/web-cafe-menu"
           />
 
@@ -44,11 +59,21 @@ const Project = () => {
             ]}
             btnLWidth="w-full"
             btnRWidth="hidden"
-            viewLink="/project"
+            viewLink="#maintenance"
             repoLink="https://github.com/andi-ramadhan/openmusic-api"
           />
-
       </div>
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex justify-center items-center bg-my-black/50">
+          <MaintenanceModal />
+          <button
+            className="absolute top-5 right-5 text-my-red text-3xl"
+            onClick={() => setShowModal(false)}
+          >
+            &times;
+          </button>
+        </div>
+      )}
     </section>
   )
 }
