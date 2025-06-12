@@ -23,8 +23,8 @@ const AboutBrief = () => {
             viewport={{ once: true }}
             className="text-balance md:text-lg"
           >
-            Have a <span className="font-semibold text-my-red">good taste</span> at tweaking a design on <span className="font-semibold text-my-red">FrontEnd</span> as well as
-            working with logic on the <span className="font-semibold text-my-red"> Backend</span> side. Details and goals oriented,
+            I like tweaking UI on <span className="font-semibold text-my-red"> FrontEnd</span>, make it work as well as working with logic on the <span className="font-semibold text-my-red"> Backend</span> side.
+            Details and goals oriented,
             <span className="font-semibold text-my-red"> user experience above all</span>.
           </motion.p>
 
