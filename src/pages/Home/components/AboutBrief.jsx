@@ -63,7 +63,8 @@ const AboutBrief = () => {
               <ProjectCardSmall
                 imgSrc="/assets/siichisei.webp"
                 title="SiiChiSei Vocal Course"
-                desc="Full Front-End (SPA) Company Website. It's a real project for a vocal course information website."
+                desc="A Company Profile and Vocal Course Information website. Purposed to serve a vocal courses information, prioritized to give
+                a clarity of the services to user."
                 tags={[
                   { child: 'React Router' }, { child: 'Vite' }, { child: 'TailwindCSS' }, { child: 'EmailJS' }
                 ]}
