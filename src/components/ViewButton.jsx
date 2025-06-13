@@ -1,11 +1,10 @@
 import { NavLink } from "react-router";
 
-const ViewButton = ({ btnWidth = '', viewTo = '', btnHeight = 'h-10', onClick }) => {
+const ViewButton = ({ btnWidth = '', viewTo = '', btnHeight = 'h-10' }) => {
   if (typeof onClick === 'function') {
     return (
       <button
         type="button"
-        onClick={onClick}
         className={`${btnWidth} ${btnHeight} cursor-pointer
         flex gap-2 justify-center items-center ring-2 ring-my-cyan font-semibold tracking-wide rounded-lg`}
       >

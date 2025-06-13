@@ -7,7 +7,6 @@ const Buttons = ({ btnLWidth = '', btnRWidth = '', viewTo = '', liveTo = '', onV
       <ViewButton 
         btnWidth={btnLWidth}
         viewTo={viewTo}
-        onClick={onViewClick}
       />
       <Link
         to={liveTo}
