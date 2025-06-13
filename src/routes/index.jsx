@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import ProjectDetail from "../pages/Project/ProjectView/ProjectDetail";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const About = lazy(() => import("../pages/About/About"));
@@ -13,8 +14,9 @@ const PageRoute = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />}/>
-        <Route path='/project' element={<Project />}/>
+        <Route path='/about' element={<About />} />
+        <Route path='/project' element={<Project />} />
+        <Route path='/project/:slug' element={<ProjectDetail />} />
       </Routes>
     </Suspense>
   )
