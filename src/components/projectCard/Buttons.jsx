@@ -1,12 +1,13 @@
 import { Link } from "react-router";
 import ViewButton from "../ViewButton";
 
-const Buttons = ({ btnLWidth = '', btnRWidth = '', viewTo = '', liveTo = '' }) => {
+const Buttons = ({ btnLWidth = '', btnRWidth = '', viewTo = '', liveTo = '', onViewClick }) => {
   return (
     <>
       <ViewButton 
         btnWidth={btnLWidth}
         viewTo={viewTo}
+        onClick={onViewClick}
       />
       <Link
         to={liveTo}

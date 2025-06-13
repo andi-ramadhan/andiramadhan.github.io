@@ -1,7 +1,18 @@
 import Buttons from "./Buttons";
 import TagCard from "../TagCard";
 
-const ProjectCardSmall = ({ imgSrc = '', title = '', desc = '', tags = [], btnLWidth = 'w-3/5', btnRWidth = 'w-2/5', viewLink = '#', liveLink = '#', repoLink = '' }) => {
+const ProjectCardSmall = ({ 
+  imgSrc = '', 
+  title = '', 
+  desc = '', 
+  tags = [], 
+  btnLWidth = 'w-3/5',
+  btnRWidth = 'w-2/5', 
+  viewLink = '#', 
+  liveLink = '#', 
+  repoLink = '',
+  onViewClick
+}) => {
   return (
     <div className="w-full md:h-[600px] grid grid-rows-[auto_1fr_auto_auto] gap-5 p-6 rounded-lg shadow-lg shadow-my-black/20">
       
@@ -45,6 +56,7 @@ const ProjectCardSmall = ({ imgSrc = '', title = '', desc = '', tags = [], btnLW
           btnRWidth={btnRWidth}
           viewTo={viewLink}
           liveTo={liveLink}
+          onViewClick={onViewClick}
         />
       </div>
     </div>
