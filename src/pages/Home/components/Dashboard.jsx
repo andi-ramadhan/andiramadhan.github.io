@@ -43,14 +43,14 @@ const Dashboard = () => {
           initial= {{ opacity: 0, y: 20 }}
           animate= {{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.8}}
-          className="flex flex-col gap-4 pt-2"
+          className="flex flex-col gap-4 pt-2 items-center justify-center"
         >
           <p className="flex flex-wrap gap-2 sm:items-center sm:justify-center font-semibold text-sm md:text-lg">
             <motion.span
               initial= {{ opacity: 0, y: 20 }}
               animate= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.9}} 
-              className="border-my-cyan border-2 px-6 py-2 rounded-xl"
+              className="border-my-cyan bg-my-white/50 border-2 px-6 py-2 rounded-xl"
             >
               Junior Full-Stack Web Developer
             </motion.span>
@@ -58,7 +58,7 @@ const Dashboard = () => {
               initial= {{ opacity: 0, y: 20 }}
               animate= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 1}} 
-              className="border-my-cyan border-2 px-6 py-2 rounded-xl"
+              className="border-my-cyan bg-my-white/50 border-2 px-6 py-2 rounded-xl"
             >
               IT Support Specialist
             </motion.span>
@@ -66,11 +66,18 @@ const Dashboard = () => {
               initial= {{ opacity: 0, y: 20 }}
               animate= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 1.1}}
-              className="border-my-cyan border-2 px-6 py-2 rounded-xl"
+              className="border-my-cyan bg-my-white/50 border-2 px-6 py-2 rounded-xl"
             >
               Illustrator
             </motion.span>
           </p>
+          <motion.div 
+            initial= {{ opacity: 0, y: 20 }}
+            animate= {{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 1.2}}
+            className='flex items-center justify-center mt-3 md:mt-5 bg-my-cyan/70 w-[75%] md:w-[40%] h-10 rounded-full'>
+            <p className='md:text-lg flex items-center gap-3 text-my-white'>Open for Opportunity</p>
+          </motion.div>
         </motion.div>
       </div>
       <motion.button 
