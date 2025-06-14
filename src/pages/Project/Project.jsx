@@ -5,10 +5,10 @@ import { ProjectData } from "./ProjectView/ProjectDetail.data";
 
 const Project = () => {
   return (
-    <section id="project" className="flex flex-col md:items-center w-[85%] md:w-[80%] py-25 md:py-40 gap-10 text-my-black">
+    <section id="project" className="flex flex-col md:items-center w-[85%] md:w-[80%] py-25 md:pt-30 md:pb-5 gap-10 text-my-black">
       <motion.h1 
         initial= {{ opacity: 0, y: 20 }}
-        whileInView= {{ opacity: 1, y: 0 }}
+        animate= {{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.4 }}
         viewport={{ once: true }}
         className="text-3xl md:text-4xl text-my-cyan font-semibold"
@@ -20,7 +20,7 @@ const Project = () => {
           <motion.div
           key={project.key}
           initial= {{ opacity: 0, y: 20 }}
-          whileInView= {{ opacity: 1, y: 0 }}
+          animate= {{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.5 + idx * 0.1 }}
           viewport={{ once: true }}
           >
