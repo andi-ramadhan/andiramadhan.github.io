@@ -5,7 +5,7 @@ import Dashboard from "./components/Dashboard";
 
 const Home = () => {
   return (
-    <section className="flex flex-col w-[85%] md:w-[50%] py-20 gap-10">
+    <section className="flex flex-col w-[85%] md:w-[50%] py-20 gap-10 z-50">
       <Dashboard />
       <AboutBrief />
       <ContactBrief />

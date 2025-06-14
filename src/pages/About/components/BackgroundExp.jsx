@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const BackgroundExp = () => {
   return (
-    <section className="flex flex-col gap-7 bg-my-white text-my-black">
+    <section className="flex flex-col gap-7 text-my-black">
       <article className="flex flex-col gap-5">
         <motion.h1 
           initial= {{ opacity: 0, y: 20 }}

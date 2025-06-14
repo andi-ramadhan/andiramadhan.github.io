@@ -13,7 +13,7 @@ const ProjectCardSmall = ({
   repoLink = '',
 }) => {
   return (
-    <div className="w-full md:h-[600px] grid grid-rows-[auto_1fr_auto_auto] gap-5 p-6 rounded-lg shadow-lg shadow-my-black/20">
+    <div className="w-full md:h-[600px] grid grid-rows-[auto_1fr_auto_auto] gap-5 p-6 rounded-lg shadow-lg shadow-my-black/20 bg-my-white">
       
       {/* IMAGE */}
       <figure className="w-full h-36 md:h-50 overflow-hidden rounded-md">

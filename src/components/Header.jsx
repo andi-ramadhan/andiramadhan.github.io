@@ -13,7 +13,7 @@ const Header = ({ activeSection, onSectionChange }) => {
   ];
 
   return (
-    <header className="relative z-20 flex justify-center px-5 md:justify-center">
+    <header className="relative z-99 flex justify-center px-5 md:justify-center">
 
       <motion.nav 
         initial= {{ opacity: 0, y: 20 }}

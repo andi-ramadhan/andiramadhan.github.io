@@ -5,7 +5,7 @@ import { ProjectData } from "./ProjectView/ProjectDetail.data";
 
 const Project = () => {
   return (
-    <section id="project" className="flex flex-col md:items-center w-[85%] md:w-[80%] py-25 md:pt-30 md:pb-5 gap-10 text-my-black">
+    <section id="project" className="flex flex-col md:items-center w-[85%] md:w-[80%] py-25 md:pt-30 md:pb-5 gap-10 text-my-black z-50">
       <motion.h1 
         initial= {{ opacity: 0, y: 20 }}
         animate= {{ opacity: 1, y: 0 }}

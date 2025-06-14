@@ -9,6 +9,7 @@
   --color-my-black: #333125;
   --font-inter: "Inter", sans-serif;
   --font-aleo: "Aleo", serif;
+  --blur-lil: 2.5px;
 }
 
 @layer base {

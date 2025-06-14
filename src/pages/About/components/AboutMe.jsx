@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
-    <section className="flex flex-col justify-center gap-7 bg-my-white text-my-black">
+    <section className="flex flex-col justify-center gap-7 text-my-black">
       <article className="flex flex-col gap-3">
         <motion.header 
           initial= {{ opacity: 0, y: 20 }}

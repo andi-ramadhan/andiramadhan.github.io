@@ -11,7 +11,7 @@ const ProjectDetail = () => {
   if (!project) return <div>Project not found</div>
 
   return (
-    <section className="bg-my-white flex flex-col items-center py-30 gap-20 text-my-black w-full h-full">
+    <section className="z-50 flex flex-col items-center py-30 gap-20 text-my-black w-full h-full">
       <div className="px-4 flex flex-col gap-10 w-[85%] md:w-[50%]">
         {/* TITLE */}
         <motion.h1 
