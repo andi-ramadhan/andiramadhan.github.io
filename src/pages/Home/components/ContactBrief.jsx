@@ -10,8 +10,8 @@ const ContactBrief = () => {
   ]
 
   return (
-    <section id="about" className="w-full min-h-[80dvh] flex justify-center text-my-black">
-      <article className="w-[80%] md:w-[40%] flex flex-col md:items-center gap-2 md:gap-8 pt-20 md:pt-40 pb-20 border-t-2 border-dashed border-my-cyan">
+    <section id="about" className="w-full min-h-[70dvh] md:min-h-[50dvh] flex justify-center text-my-black">
+      <article className="flex flex-col md:items-center gap-2 md:gap-8 pt-20 pb-30 border-t-2 border-dashed border-my-cyan">
         <motion.h1
           initial= {{ opacity: 0, y: 20 }}
           whileInView= {{ opacity: 1, y: 0 }}
@@ -48,11 +48,7 @@ const ContactBrief = () => {
           </NavLink>
           ))}
         </div>
-      </article>
-      <div className="absolute bottom-15 text-center text-sm opacity-50">
-        <p>&copy; 2025 Andi Fajar Ramadhan</p>
-        <p>All rights reserved</p>
-      </div>      
+      </article>     
     </section>
   )
 }

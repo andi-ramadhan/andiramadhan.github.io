@@ -9,9 +9,9 @@ const Dashboard = () => {
   }
   
   return (
-    <section id="home" className="flex flex-col justify-center text-my-black items-center -translate-y-5 min-h-screen w-full">
+    <section id="home" className="flex flex-col justify-center text-my-black items-center -translate-y-25 min-h-screen w-full">
 
-      <div className="flex flex-col justify-center items-center gap-5 w-[80%] md:w-[40%]">
+      <div className="flex flex-col justify-center items-center gap-5">
         <div className="flex flex-col gap-2">
           <motion.h1
             initial= {{ opacity: 0, y: 20 }}

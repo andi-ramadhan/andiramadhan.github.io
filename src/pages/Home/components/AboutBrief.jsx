@@ -1,11 +1,15 @@
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import ProjectCardSmall from "../../../components/projectCard/ProjectCardSmall";
+import { ProjectData } from "../../Project/ProjectView/ProjectDetail.data";
 
 const AboutBrief = () => {
+  const project1 = ProjectData[0];
+  const project2 = ProjectData[1];
+  
   return (
     <section id="about" className="w-full min-h-dvh flex justify-center">
-      <article className="w-[80%] md:w-[40%] flex flex-col gap-20 pt-20 md:pt-40 pb-20 border-t-2 border-dashed border-my-cyan text-my-black">
+      <article className="flex flex-col gap-20 pt-25 pb-10 border-t-2 border-dashed border-my-cyan text-my-black">
         <div className="flex flex-col gap-4">
           <motion.h1
             initial= {{ opacity: 0, y: 20 }}
@@ -52,46 +56,44 @@ const AboutBrief = () => {
             Latest Projects
           </motion.h1>
           
-          <div className="flex flex-wrap">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <motion.div
-              className="w-full md:w-1/2 md:px-2 mb-5"
               initial= {{ opacity: 0, y: 20 }}
               whileInView= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.9}}
               viewport={{ once: true }}
             >
-              <ProjectCardSmall
-                imgSrc="/assets/siichisei.webp"
-                title="SiiChiSei Vocal Course"
-                desc="A Company Profile and Vocal Course Information website. Purposed to serve a vocal courses information, prioritized to give
-                a clarity of the services to user."
-                tags={[
-                  { child: 'React Router' }, { child: 'Vite' }, { child: 'TailwindCSS' }, { child: 'EmailJS' }
-                ]}
-                viewLink="/project"
-                liveLink='https://siichisei-vocalcourse.pages.dev/'
+              <ProjectCardSmall 
+                id={project1.key}
+                imgSrc={project1.imgSrc}
+                title={project1.title}
+                desc={project1.briefDesc}
+                tags={project1.tags}
+                viewLink={`/project/${project1.slug}`}
+                liveLink={project1.link}
+                repoLink={project1.github}
+                btnLWidth={ project1.link === '' ? "w-full" : 'w-3/5' }
+                btnRWidth={ project1.link === '' ? "hidden" : 'w-2/5' }
               />
             </motion.div>
             
             <motion.div
-              className="w-full md:w-1/2 md:px-2 mb-5"
               initial= {{ opacity: 0, y: 20 }}
               whileInView= {{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 1}}
               viewport={{ once: true }}
             >
-              <ProjectCardSmall
-                imgSrc="/assets/webcafe.webp"
-                title="Web Cafe Menu (OnProgress)"
-                desc="Full-Stack Web Project, Cafe menu web based
-                    that serve a transparancy between customer and the menu order cycle."
-                tags={[
-                  { child: 'React' }, { child: 'Vite' }, { child: 'TailwindCSS' }, { child: 'ExpressJs' },
-                  { child: 'NodeJs' }, { child: 'MongoDB' }
-                ]}
-                btnLWidth="w-full"
-                btnRWidth="hidden"
-                viewLink="/project"
+              <ProjectCardSmall 
+                id={project2.key}
+                imgSrc={project2.imgSrc}
+                title={project2.title}
+                desc={project2.briefDesc}
+                tags={project2.tags}
+                viewLink={`/project/${project2.slug}`}
+                liveLink={project2.link}
+                repoLink={project2.github}
+                btnLWidth={ project2.link === '' ? "w-full" : 'w-3/5' }
+                btnRWidth={ project2.link === '' ? "hidden" : 'w-2/5' }
               />
             </motion.div>
           </div>
