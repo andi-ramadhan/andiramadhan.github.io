@@ -8,7 +8,7 @@ const Tools = () => {
       <motion.h1 
         initial= {{ opacity: 0, y: 20 }}
         whileInView= {{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.5 }}
+        transition={{ duration: 0.4, delay: 0.7 }}
         viewport={{ once: true }}
         className="text-3xl md:text-4xl font-semibold text-my-cyan"
       >
@@ -22,7 +22,7 @@ const Tools = () => {
             key={idx}
             initial= {{ opacity: 0, y: 20 }}
             whileInView= {{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.6 + idx * 0.1 }}
+            transition={{ duration: 0.4, delay: 0.8 + idx * 0.1 }}
             viewport={{ once: true }}
           >
             <Tooltip
