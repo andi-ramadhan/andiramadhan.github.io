@@ -10,9 +10,9 @@ function App() {
 
   useEffect(() => {
     const currentHost = window.location.hostname;
-    const target = 'difra.rf.gd';
+    const target = 'www.difra.rf.gd';
 
-    if (currentHost === 'www.difra.rf.gd' || currentHost   === 'difra.pages.dev') {
+    if (currentHost === 'difra.rf.gd' || currentHost   === 'difra.pages.dev') {
       window.location.href = `https://${target}${window.location.pathname}${window.location.search}`;
     }
   }, []);
