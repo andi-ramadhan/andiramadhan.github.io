@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import PageRoute from './routes';
@@ -7,6 +7,15 @@ import ScrollToTop from './hooks/ScrollToTop';
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const currentHost = window.location.hostname;
+    const target = 'difra.rf.gd';
+
+    if (currentHost === 'www.difra.rf.gd' || currentHost   === 'difra.pages.dev') {
+      window.location.href = `https://${target}${window.location.pathname}${window.location.search}`;
+    }
+  }, []);
 
   return (
     <>
